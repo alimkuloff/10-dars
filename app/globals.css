@@ -2,32 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+nav ul{
+    font-size: 14px;
+    font-weight: 500;
+    color: #424242;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+nav li:hover{
+    color: #5A47AB;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.links>a{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    max-width: 200px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    gap: 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsWrapper li{
+    color: #424242;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    padding-bottom: 10px;
+}
+
+.cardsWrapper li:hover{
+    color: #D05270;
+    cursor: pointer;
+    border-bottom: 1px solid #D05270;
+}
+
+.card p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #424242;
+    margin-top: 16px;
+}
+
+.card b{
+    font-size: 24px;
+    font-weight: 600;
+    color: #D05270;
+    margin-top: 14px;
+}
+
+.card small{
+    font-size: 16px;
+    font-weight: 400;
+    color: #424242;
+    margin-top: 12px;
+}
+
+.card a{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #D05270;
+    border-bottom: 1px solid #D05270;
+    margin-top: 30px;
+    max-width: fit-content;
+    
 }
